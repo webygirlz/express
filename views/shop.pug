@@ -1,0 +1,28 @@
+extends layouts/main-layout.pug
+
+block styles 
+    link(rel="stylesheet", href="/css/forms.css")
+    link(rel="stylesheet", href="/css/product.css")
+  
+
+block content 
+     main
+            .grid
+                if prods.length > 0
+                    each products in prods  
+                        article.card.product-item 
+                                header.card-header 
+                                    h1.product_title #{prods.title}
+                                div.card_image 
+                                    img(src="https://i.pinimg.com/736x/8e/dd/5e/8edd5e6c03f9803443da9b40dbb532d9.jpg", style="width: 200px; height: 400px;")        
+                                div.card_content 
+                                    h2.product_price $199.99
+                                    p.product.btn Add to Cart 
+                                .card_actions 
+                                    button.btn Add to Cart    
+                    
+                else    
+                    h1 No products     
+                            
+
+

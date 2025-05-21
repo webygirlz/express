@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.main-header {
+    background-color: green;
+    color: white;
+    padding: 1rem;
+}
+
+.main-header__item-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-header__item a {
+    color: white;
+    text-decoration: none;
+}
