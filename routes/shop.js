@@ -1,4 +1,4 @@
-const path = require('path');
+// const path = require('path');
 
 const express = require('express');
 
@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 
   // rendering the html file using pug
   const products = adminData.products || [];
-  res.render('shop',{prods:products,docTitle:'Shop',path:'/'}) 
+  res.render('shop',{prods:products,docTitle:'Shop',path:'/',hasProducts :products.length,activeShop:true,ProductCSS:true,layout:true}) 
 });
 
 module.exports = router;
