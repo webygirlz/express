@@ -18,8 +18,8 @@ product.save();
 }
 
 exports.getProducts = (req, res, next) => {
-    const products = Product.fetchAll();
-  res.render('shop', {
+    const products = Product.fetchAll(products =>{
+    res.render('shop', {
     prods: products,
     pageTitle: 'Shop',
     path: '/',
@@ -27,4 +27,6 @@ exports.getProducts = (req, res, next) => {
     activeShop: true,
     productCSS: true
   });
+    });
+  
 }
